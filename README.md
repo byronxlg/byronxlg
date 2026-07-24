@@ -13,9 +13,9 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
 <a href="https://github.com/byronxlg/polymarket-tui"><img src="assets/cards/polymarket-tui.svg" alt="polymarket-tui" width="400"></a>
 <a href="https://github.com/byronxlg/polyagent"><img src="assets/cards/polyagent.svg" alt="polyagent" width="400"></a>
-<a href="https://github.com/byronxlg/oss-maintainer-bot"><img src="assets/cards/oss-maintainer-bot.svg" alt="oss-maintainer-bot" width="400"></a>
 <a href="https://github.com/byronxlg/skills"><img src="assets/cards/skills.svg" alt="skills" width="400"></a>
 <a href="https://github.com/byronxlg/causeflow"><img src="assets/cards/causeflow.svg" alt="causeflow" width="400"></a>
+<a href="https://github.com/byronxlg/DATA301_Project"><img src="assets/cards/DATA301_Project.svg" alt="DATA301_Project" width="400"></a>
 
 <details>
 <summary>All public projects</summary>
@@ -28,7 +28,6 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 | [MMM-AT-Bus](https://github.com/byronxlg/MMM-AT-Bus) |  | JavaScript | 1 |
 | [homebrew-tap](https://github.com/byronxlg/homebrew-tap) | Homebrew tap for Byron's tools (polymarket-tui, ...) | Python | 0 |
 | [polyagent](https://github.com/byronxlg/polyagent) | Multi-agent LLM simulation with credit-based economy | Python | 0 |
-| [oss-maintainer-bot](https://github.com/byronxlg/oss-maintainer-bot) | Forkable multi-agent pipeline for open-source project maintenance. Powered by skillfold. | - | 0 |
 | [skills](https://github.com/byronxlg/skills) | A collection of Claude Code skills by byronxlg | - | 0 |
 | [causeflow](https://github.com/byronxlg/causeflow) | Appwrite Sites Hackathon 2025 Submission | TypeScript | 0 |
 | [Travel_ARIMA_Analysis](https://github.com/byronxlg/Travel_ARIMA_Analysis) |  | - | 0 |

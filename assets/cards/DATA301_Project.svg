@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120" role="img" aria-label="oss-maintainer-bot">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120" role="img" aria-label="DATA301_Project">
   <style>
     .bg { fill: none; stroke: #7d8590; stroke-opacity: 0.4; }
     .name { fill: #4184e4; font: 600 14px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
     .desc, .meta { fill: #7d8590; font: 400 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
   </style>
   <rect class="bg" x="0.5" y="0.5" width="399" height="119" rx="6"/>
-  <text class="name" x="16" y="30">oss-maintainer-bot</text>
-  <text class="desc" x="16" y="54">Forkable multi-agent pipeline for open-source project<tspan x="16" dy="17">maintenance. Powered by skillfold.</tspan></text>
+  <text class="name" x="16" y="30">DATA301_Project</text>
+  <text class="desc" x="16" y="54">DATA301 Group Project<tspan x="16" dy="17"></tspan></text>
   <circle cx="21" cy="94" r="5" fill="#8b949e"/>
   <text class="meta" x="33" y="98">-</text>
   <text class="meta" x="150" y="98">&#9733; 0</text>

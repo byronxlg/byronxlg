@@ -16,17 +16,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Regenerate projects table
+      - name: Regenerate projects section
         env:
           GH_TOKEN: ${{ github.token }}
-        run: ./scripts/update-projects.sh "${{ github.repository_owner }}"
+        run: python3 scripts/update_projects.py "${{ github.repository_owner }}"
 
       - name: Commit if changed
         run: |
-          if ! git diff --quiet README.md; then
+          git add README.md assets/cards
+          if ! git diff --quiet --cached; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md
-            git commit -m "Update projects list"
+            git commit -m "Update projects section"
             git push
           fi

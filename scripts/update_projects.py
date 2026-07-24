@@ -7,6 +7,7 @@ all public non-fork repos. Cards are rendered locally so the profile has no
 dependency on third-party image services.
 """
 
+import datetime
 import json
 import pathlib
 import subprocess
@@ -76,7 +77,10 @@ def card_worthy(repo):
     repo without a description isn't being presented to anyone."""
     if repo["name"].startswith("homebrew-") or repo["name"] == "dotfiles":
         return False
-    return bool(repo["description"])
+    if not repo["description"]:
+        return False
+    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=730)
+    return datetime.datetime.fromisoformat(repo["pushed_at"]) >= cutoff
 
 
 def render_card(repo):

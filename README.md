@@ -15,7 +15,6 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 <a href="https://github.com/byronxlg/polyagent"><img src="assets/cards/polyagent.svg" alt="polyagent" width="400"></a>
 <a href="https://github.com/byronxlg/skills"><img src="assets/cards/skills.svg" alt="skills" width="400"></a>
 <a href="https://github.com/byronxlg/causeflow"><img src="assets/cards/causeflow.svg" alt="causeflow" width="400"></a>
-<a href="https://github.com/byronxlg/DATA301_Project"><img src="assets/cards/DATA301_Project.svg" alt="DATA301_Project" width="400"></a>
 
 <details>
 <summary>All public projects</summary>

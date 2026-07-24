@@ -31,16 +31,15 @@ LANGUAGE_COLORS = {
 }
 DEFAULT_LANGUAGE_COLOR = "#8b949e"
 
+# Single mid-tone palette with a transparent background: GitHub's theme
+# setting and the viewer's OS color scheme can disagree, and an SVG served
+# through camo only sees the OS scheme, so theme-adaptive colors would
+# mismatch the page for some viewers. Neutral colors read on both grounds.
 CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120" role="img" aria-label="{name}">
   <style>
-    .bg {{ fill: #ffffff; stroke: #d1d9e0; }}
-    .name {{ fill: #0969da; font: 600 14px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
-    .desc, .meta {{ fill: #59636e; font: 400 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
-    @media (prefers-color-scheme: dark) {{
-      .bg {{ fill: #0d1117; stroke: #30363d; }}
-      .name {{ fill: #4493f8; }}
-      .desc, .meta {{ fill: #9198a1; }}
-    }}
+    .bg {{ fill: none; stroke: #7d8590; stroke-opacity: 0.4; }}
+    .name {{ fill: #4184e4; font: 600 14px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
+    .desc, .meta {{ fill: #7d8590; font: 400 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
   </style>
   <rect class="bg" x="0.5" y="0.5" width="399" height="119" rx="6"/>
   <text class="name" x="16" y="30">{name}</text>

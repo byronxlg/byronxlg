@@ -2,20 +2,10 @@
 
 AI engineer based in Auckland, New Zealand. I build agent pipelines, data platforms, and the occasional terminal app.
 
-## Featured
-
-<table>
-<tr>
-<td width="50%" valign="top">
-<a href="https://github.com/byronxlg/skillfold"><img src="assets/skillfold.png" alt="skillfold - declarative skill manager for Claude config"></a>
-<p><b><a href="https://github.com/byronxlg/skillfold">skillfold</a></b> - declarative skill manager for Claude config. One YAML file, a lockfile, reproducible installs. <a href="https://byronxlg.github.io/skillfold/">Site</a></p>
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/byronxlg/polymarket-tui"><img src="https://polymarket-tui.botsmith.dev/assets/demo.gif" alt="polymarket-tui - live order books, charts, and order placement in the terminal"></a>
-<p><b><a href="https://github.com/byronxlg/polymarket-tui">polymarket-tui</a></b> - keyboard-driven terminal client for Polymarket: live order books, charts, and order placement. <a href="https://byronxlg.github.io/polymarket-tui/">Site</a></p>
-</td>
-</tr>
-</table>
+<p>
+<a href="https://github.com/byronxlg/skillfold"><img src="assets/skillfold.png" alt="skillfold - declarative skill manager for Claude config" width="49%"></a>
+<a href="https://github.com/byronxlg/polymarket-tui"><img src="https://polymarket-tui.botsmith.dev/assets/demo.gif" alt="polymarket-tui - live order books, charts, and order placement in the terminal" width="49%"></a>
+</p>
 
 ## Projects
 

@@ -2,12 +2,13 @@
 """Regenerates the projects section of README.md and the SVG repo cards.
 
 Rewrites everything between the <!-- projects:start --> / <!-- projects:end -->
-markers: card images for the top repos by stars, then a collapsible table of
-all public non-fork repos. Cards are rendered locally so the profile has no
-dependency on third-party image services.
+markers: cards for the repos in FEATURED (in that order), then a collapsible
+table of all public non-fork repos. Cards are rendered locally so the profile
+has no dependency on third-party image services. A card embeds its preview
+image when assets/previews/<name>.jpg exists; otherwise it renders text-only.
 """
 
-import datetime
+import base64
 import json
 import pathlib
 import subprocess
@@ -17,8 +18,13 @@ from xml.sax.saxutils import escape
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 CARDS_DIR = ROOT / "assets" / "cards"
+PREVIEWS_DIR = ROOT / "assets" / "previews"
 README = ROOT / "README.md"
-TOP_N = 6
+
+# Hand-picked showcase, in display order. A listed repo that the public API
+# does not return (private, deleted, renamed) is skipped, so a repo made
+# public later appears on the next regeneration without a code change.
+FEATURED = ["skillfold", "polymarket-tui", "semantic-similarity-app", "dotfiles"]
 
 LANGUAGE_COLORS = {
     "Python": "#3572A5",
@@ -36,18 +42,33 @@ DEFAULT_LANGUAGE_COLOR = "#8b949e"
 # setting and the viewer's OS color scheme can disagree, and an SVG served
 # through camo only sees the OS scheme, so theme-adaptive colors would
 # mismatch the page for some viewers. Neutral colors read on both grounds.
-CARD_TEMPLATE = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120" role="img" aria-label="{name}">
-  <style>
-    .bg {{ fill: none; stroke: #7d8590; stroke-opacity: 0.4; }}
-    .name {{ fill: #4184e4; font: 600 14px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
-    .desc, .meta {{ fill: #7d8590; font: 400 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }}
-  </style>
+CARD_STYLE = """  <style>
+    .bg { fill: none; stroke: #7d8590; stroke-opacity: 0.4; }
+    .name { fill: #4184e4; font: 600 14px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+    .desc, .meta { fill: #7d8590; font: 400 12px -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+  </style>"""
+
+TEXT_CARD = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120" role="img" aria-label="{name}">
+{style}
   <rect class="bg" x="0.5" y="0.5" width="399" height="119" rx="6"/>
   <text class="name" x="16" y="30">{name}</text>
   <text class="desc" x="16" y="54">{desc_line1}<tspan x="16" dy="17">{desc_line2}</tspan></text>
   <circle cx="21" cy="94" r="5" fill="{lang_color}"/>
   <text class="meta" x="33" y="98">{language}</text>
   <text class="meta" x="150" y="98">&#9733; {stars}</text>
+</svg>
+"""
+
+IMAGE_CARD = """<svg xmlns="http://www.w3.org/2000/svg" width="400" height="352" viewBox="0 0 400 352" role="img" aria-label="{name}">
+{style}
+  <rect class="bg" x="0.5" y="0.5" width="399" height="351" rx="6"/>
+  <clipPath id="preview"><rect x="12" y="12" width="376" height="227" rx="4"/></clipPath>
+  <image href="data:image/jpeg;base64,{preview}" x="12" y="12" width="376" height="227" preserveAspectRatio="xMidYMid slice" clip-path="url(#preview)"/>
+  <text class="name" x="16" y="266">{name}</text>
+  <text class="desc" x="16" y="289">{desc_line1}<tspan x="16" dy="17">{desc_line2}</tspan></text>
+  <circle cx="21" cy="327" r="5" fill="{lang_color}"/>
+  <text class="meta" x="33" y="331">{language}</text>
+  <text class="meta" x="150" y="331">&#9733; {stars}</text>
 </svg>
 """
 
@@ -71,18 +92,6 @@ def sort_repos(repos):
     return sorted(repos, key=lambda r: r["stargazers_count"], reverse=True)
 
 
-def card_worthy(repo):
-    """Supporting repos don't belong on the cards even when they outrank
-    real projects on stars: taps and dotfiles are infrastructure, and a
-    repo without a description isn't being presented to anyone."""
-    if repo["name"].startswith("homebrew-") or repo["name"] == "dotfiles":
-        return False
-    if not repo["description"]:
-        return False
-    cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=730)
-    return datetime.datetime.fromisoformat(repo["pushed_at"]) >= cutoff
-
-
 def render_card(repo):
     lines = textwrap.wrap(repo["description"] or "", width=56)
     line1 = lines[0] if lines else ""
@@ -92,14 +101,20 @@ def render_card(repo):
         else ""
     )
     language = repo["language"] or "-"
-    return CARD_TEMPLATE.format(
-        name=escape(repo["name"]),
-        desc_line1=escape(line1),
-        desc_line2=escape(line2),
-        language=escape(language),
-        lang_color=LANGUAGE_COLORS.get(language, DEFAULT_LANGUAGE_COLOR),
-        stars=repo["stargazers_count"],
-    )
+    fields = {
+        "style": CARD_STYLE,
+        "name": escape(repo["name"]),
+        "desc_line1": escape(line1),
+        "desc_line2": escape(line2),
+        "language": escape(language),
+        "lang_color": LANGUAGE_COLORS.get(language, DEFAULT_LANGUAGE_COLOR),
+        "stars": repo["stargazers_count"],
+    }
+    preview = PREVIEWS_DIR / f"{repo['name']}.jpg"
+    if preview.exists():
+        fields["preview"] = base64.b64encode(preview.read_bytes()).decode()
+        return IMAGE_CARD.format(**fields)
+    return TEXT_CARD.format(**fields)
 
 
 def table_row(repo):
@@ -113,7 +128,8 @@ def table_row(repo):
 def main():
     user = sys.argv[1] if len(sys.argv) > 1 else "byronxlg"
     repos = sort_repos(fetch_repos(user))
-    top = [r for r in repos if card_worthy(r)][:TOP_N]
+    by_name = {r["name"]: r for r in repos}
+    top = [by_name[n] for n in FEATURED if n in by_name]
 
     CARDS_DIR.mkdir(parents=True, exist_ok=True)
     wanted = {f"{r['name']}.svg" for r in top}

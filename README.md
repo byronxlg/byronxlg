@@ -12,10 +12,10 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 <!-- projects:start -->
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
 <a href="https://github.com/byronxlg/polymarket-tui"><img src="assets/cards/polymarket-tui.svg" alt="polymarket-tui" width="400"></a>
-<a href="https://github.com/byronxlg/dotfiles"><img src="assets/cards/dotfiles.svg" alt="dotfiles" width="400"></a>
-<a href="https://github.com/byronxlg/MMM-AT-Bus"><img src="assets/cards/MMM-AT-Bus.svg" alt="MMM-AT-Bus" width="400"></a>
-<a href="https://github.com/byronxlg/homebrew-tap"><img src="assets/cards/homebrew-tap.svg" alt="homebrew-tap" width="400"></a>
 <a href="https://github.com/byronxlg/polyagent"><img src="assets/cards/polyagent.svg" alt="polyagent" width="400"></a>
+<a href="https://github.com/byronxlg/oss-maintainer-bot"><img src="assets/cards/oss-maintainer-bot.svg" alt="oss-maintainer-bot" width="400"></a>
+<a href="https://github.com/byronxlg/skills"><img src="assets/cards/skills.svg" alt="skills" width="400"></a>
+<a href="https://github.com/byronxlg/causeflow"><img src="assets/cards/causeflow.svg" alt="causeflow" width="400"></a>
 
 <details>
 <summary>All public projects</summary>

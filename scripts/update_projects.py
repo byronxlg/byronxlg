@@ -70,6 +70,15 @@ def sort_repos(repos):
     return sorted(repos, key=lambda r: r["stargazers_count"], reverse=True)
 
 
+def card_worthy(repo):
+    """Supporting repos don't belong on the cards even when they outrank
+    real projects on stars: taps and dotfiles are infrastructure, and a
+    repo without a description isn't being presented to anyone."""
+    if repo["name"].startswith("homebrew-") or repo["name"] == "dotfiles":
+        return False
+    return bool(repo["description"])
+
+
 def render_card(repo):
     lines = textwrap.wrap(repo["description"] or "", width=56)
     line1 = lines[0] if lines else ""
@@ -100,7 +109,7 @@ def table_row(repo):
 def main():
     user = sys.argv[1] if len(sys.argv) > 1 else "byronxlg"
     repos = sort_repos(fetch_repos(user))
-    top = repos[:TOP_N]
+    top = [r for r in repos if card_worthy(r)][:TOP_N]
 
     CARDS_DIR.mkdir(parents=True, exist_ok=True)
     wanted = {f"{r['name']}.svg" for r in top}

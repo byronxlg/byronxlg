@@ -2,12 +2,20 @@
 
 AI engineer based in Auckland, New Zealand. I build agent pipelines, data platforms, and the occasional terminal app.
 
+## What I work with
+
+- **AI & Agents** - Python, LangGraph, MLflow, RAG, text-to-SQL
+- **Cloud & Data** - Azure, Snowflake, Databricks
+- **Full Stack** - React, FastAPI, PostgreSQL
+- **Infrastructure** - Terraform, CI/CD (Azure DevOps, GitHub Actions)
+- **Certified** - Databricks GenAI Engineer Associate, SnowPro Core, Azure Data Engineer Associate
+
+## Projects
+
 <p>
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/skillfold.png" alt="skillfold - declarative skill manager for Claude config" width="49%"></a>
 <a href="https://github.com/byronxlg/polymarket-tui"><img src="https://polymarket-tui.botsmith.dev/assets/demo.gif" alt="polymarket-tui - live order books, charts, and order placement in the terminal" width="49%"></a>
 </p>
-
-## Projects
 
 <!-- projects:start -->
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
@@ -34,12 +42,5 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 
 </details>
 <!-- projects:end -->
-
-## What I work with
-
-- **AI & Agents** - Python, LangGraph, MLflow, RAG, text-to-SQL
-- **Cloud & Data** - Azure, Snowflake, Databricks
-- **Full Stack** - React, FastAPI, PostgreSQL
-- **Infrastructure** - Terraform, CI/CD (Azure DevOps, GitHub Actions)
 
 <sub>The projects section is regenerated daily from the GitHub API by [a workflow](.github/workflows/update-projects.yml) in this repo.</sub>

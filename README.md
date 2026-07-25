@@ -8,23 +8,27 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 - **Cloud & Data** - Azure, Snowflake, Databricks
 - **Full Stack** - React, FastAPI, PostgreSQL
 - **Infrastructure** - Terraform, CI/CD (Azure DevOps, GitHub Actions)
+- **Certified** - Databricks GenAI Engineer Associate, SnowPro Core, Azure Data Engineer Associate
 
 ## Projects
 
 <!-- projects:start -->
+<a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
+<a href="https://github.com/byronxlg/polymarket-tui"><img src="assets/cards/polymarket-tui.svg" alt="polymarket-tui" width="400"></a>
+<a href="https://semanticsimilarity.byronxlg.com/"><img src="assets/cards/semantic-similarity.svg" alt="semantic-similarity" width="400"></a>
+
+### All public projects
+
 | Project | Description | Language | Stars |
 | --- | --- | --- | --- |
-| [skillfold](https://github.com/byronxlg/skillfold) ([site](https://byronxlg.github.io/skillfold/)) | Configuration language and compiler for multi-agent AI pipelines. Compiles YAML config into standard SKILL.md files. | TypeScript | 11 |
-| [polymarket-tui](https://github.com/byronxlg/polymarket-tui) ([site](https://byronxlg.github.io/polymarket-tui/)) | Fast, keyboard-driven terminal client for Polymarket: live order books, charts, portfolio, and order placement | Python | 2 |
-| [dotfiles](https://github.com/byronxlg/dotfiles) |  | Python | 1 |
-| [MMM-AT-Bus](https://github.com/byronxlg/MMM-AT-Bus) |  | JavaScript | 1 |
-| [homebrew-tap](https://github.com/byronxlg/homebrew-tap) | Homebrew tap for Byron's tools (polymarket-tui, ...) | Python | 0 |
-| [polyagent](https://github.com/byronxlg/polyagent) | Multi-agent LLM simulation with credit-based economy | Python | 0 |
-| [oss-maintainer-bot](https://github.com/byronxlg/oss-maintainer-bot) | Forkable multi-agent pipeline for open-source project maintenance. Powered by skillfold. | - | 0 |
-| [skills](https://github.com/byronxlg/skills) | A collection of Claude Code skills by byronxlg | - | 0 |
-| [causeflow](https://github.com/byronxlg/causeflow) | Appwrite Sites Hackathon 2025 Submission | TypeScript | 0 |
-| [Travel_ARIMA_Analysis](https://github.com/byronxlg/Travel_ARIMA_Analysis) |  | - | 0 |
-| [DATA301_Project](https://github.com/byronxlg/DATA301_Project) | DATA301 Group Project | - | 0 |
+| [skillfold](https://github.com/byronxlg/skillfold) ([site](https://byronxlg.github.io/skillfold/)) | Configuration language and compiler for multi-agent AI pipelines. Compiles YAML config into standard SKILL.md files. | ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/skillfold?style=flat-square&label=%E2%98%85&color=444) |
+| [polymarket-tui](https://github.com/byronxlg/polymarket-tui) ([site](https://byronxlg.github.io/polymarket-tui/)) | Fast, keyboard-driven terminal client for Polymarket: live order books, charts, portfolio, and order placement | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/polymarket-tui?style=flat-square&label=%E2%98%85&color=444) |
+| [dotfiles](https://github.com/byronxlg/dotfiles) |  | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/dotfiles?style=flat-square&label=%E2%98%85&color=444) |
+| [MMM-AT-Bus](https://github.com/byronxlg/MMM-AT-Bus) |  | ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/MMM-AT-Bus?style=flat-square&label=%E2%98%85&color=444) |
+| [homebrew-tap](https://github.com/byronxlg/homebrew-tap) | Homebrew tap for Byron's tools (polymarket-tui, ...) | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/homebrew-tap?style=flat-square&label=%E2%98%85&color=444) |
+| [polyagent](https://github.com/byronxlg/polyagent) | Multi-agent LLM simulation with credit-based economy | ![Python](https://img.shields.io/badge/Python-3572A5?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/polyagent?style=flat-square&label=%E2%98%85&color=444) |
+| [skills](https://github.com/byronxlg/skills) | A collection of Claude Code skills by byronxlg |  | ![stars](https://img.shields.io/github/stars/byronxlg/skills?style=flat-square&label=%E2%98%85&color=444) |
+| [causeflow](https://github.com/byronxlg/causeflow) | Appwrite Sites Hackathon 2025 Submission | ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat-square) | ![stars](https://img.shields.io/github/stars/byronxlg/causeflow?style=flat-square&label=%E2%98%85&color=444) |
+| [Travel_ARIMA_Analysis](https://github.com/byronxlg/Travel_ARIMA_Analysis) |  |  | ![stars](https://img.shields.io/github/stars/byronxlg/Travel_ARIMA_Analysis?style=flat-square&label=%E2%98%85&color=444) |
+| [DATA301_Project](https://github.com/byronxlg/DATA301_Project) | DATA301 Group Project |  | ![stars](https://img.shields.io/github/stars/byronxlg/DATA301_Project?style=flat-square&label=%E2%98%85&color=444) |
 <!-- projects:end -->
-
-This table is regenerated daily from the GitHub API by [a workflow](.github/workflows/update-projects.yml) in this repo.

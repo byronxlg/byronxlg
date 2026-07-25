@@ -15,6 +15,7 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 <!-- projects:start -->
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
 <a href="https://github.com/byronxlg/polymarket-tui"><img src="assets/cards/polymarket-tui.svg" alt="polymarket-tui" width="400"></a>
+<a href="https://semanticsimilarity.byronxlg.com/"><img src="assets/cards/semantic-similarity.svg" alt="semantic-similarity" width="400"></a>
 <a href="https://github.com/byronxlg/dotfiles"><img src="assets/cards/dotfiles.svg" alt="dotfiles" width="400"></a>
 
 <details>

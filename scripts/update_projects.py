@@ -25,7 +25,7 @@ README = ROOT / "README.md"
 # Hand-picked showcase, in display order. A listed repo that the public API
 # does not return (private, deleted, renamed) is skipped, so a repo made
 # public later appears on the next regeneration without a code change.
-FEATURED = ["skillfold", "polymarket-tui", "semantic-similarity", "dotfiles"]
+FEATURED = ["skillfold", "polymarket-tui", "semantic-similarity"]
 
 # Showcase entries without a public repo: the card links to the live product
 # and the details are stated here, since the API cannot supply them. The
@@ -167,9 +167,7 @@ def main():
         ["| Project | Description | Language | Stars |", "| --- | --- | --- | --- |"]
         + [table_row(r) for r in repos]
     )
-    section = (
-        f"{cards}\n\n<details>\n<summary>All public projects</summary>\n\n{table}\n\n</details>"
-    )
+    section = f"{cards}\n\n### All public projects\n\n{table}"
 
     content = README.read_text()
     start = "<!-- projects:start -->"

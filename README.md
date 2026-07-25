@@ -16,10 +16,8 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 <a href="https://github.com/byronxlg/skillfold"><img src="assets/cards/skillfold.svg" alt="skillfold" width="400"></a>
 <a href="https://github.com/byronxlg/polymarket-tui"><img src="assets/cards/polymarket-tui.svg" alt="polymarket-tui" width="400"></a>
 <a href="https://semanticsimilarity.byronxlg.com/"><img src="assets/cards/semantic-similarity.svg" alt="semantic-similarity" width="400"></a>
-<a href="https://github.com/byronxlg/dotfiles"><img src="assets/cards/dotfiles.svg" alt="dotfiles" width="400"></a>
 
-<details>
-<summary>All public projects</summary>
+### All public projects
 
 | Project | Description | Language | Stars |
 | --- | --- | --- | --- |
@@ -33,8 +31,4 @@ AI engineer based in Auckland, New Zealand. I build agent pipelines, data platfo
 | [causeflow](https://github.com/byronxlg/causeflow) | Appwrite Sites Hackathon 2025 Submission | TypeScript | 0 |
 | [Travel_ARIMA_Analysis](https://github.com/byronxlg/Travel_ARIMA_Analysis) |  | - | 0 |
 | [DATA301_Project](https://github.com/byronxlg/DATA301_Project) | DATA301 Group Project | - | 0 |
-
-</details>
 <!-- projects:end -->
-
-<sub>The projects section is regenerated daily from the GitHub API by [a workflow](.github/workflows/update-projects.yml) in this repo.</sub>

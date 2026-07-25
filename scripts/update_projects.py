@@ -14,7 +14,7 @@ import pathlib
 import subprocess
 import sys
 import textwrap
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 from xml.sax.saxutils import escape
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -136,12 +136,26 @@ def render_card(repo):
     return TEXT_CARD.format(**fields)
 
 
-def table_row(repo):
+def table_row(repo, user):
     name = f"[{repo['name']}]({repo['html_url']})"
     if repo.get("homepage"):
         name += f" ([site]({repo['homepage']}))"
     description = (repo["description"] or "").replace("|", "\\|")
-    return f"| {name} | {description} | {repo['language'] or '-'} | {repo['stargazers_count']} |"
+    language = repo["language"]
+    lang_cell = (
+        f"![{language}](https://img.shields.io/badge/"
+        f"{quote(language)}-{LANGUAGE_COLORS.get(language, DEFAULT_LANGUAGE_COLOR).lstrip('#')}"
+        "?style=flat-square)"
+        if language
+        else ""
+    )
+    # Shields renders the count live from the GitHub API, so stars stay
+    # current between daily regenerations.
+    stars_cell = (
+        f"![stars](https://img.shields.io/github/stars/{user}/{repo['name']}"
+        "?style=flat-square&label=%E2%98%85&color=444)"
+    )
+    return f"| {name} | {description} | {lang_cell} | {stars_cell} |"
 
 
 def main():
@@ -165,7 +179,7 @@ def main():
     )
     table = "\n".join(
         ["| Project | Description | Language | Stars |", "| --- | --- | --- | --- |"]
-        + [table_row(r) for r in repos]
+        + [table_row(r, user) for r in repos]
     )
     section = f"{cards}\n\n### All public projects\n\n{table}"
 

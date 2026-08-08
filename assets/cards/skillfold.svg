@@ -11,5 +11,5 @@
   <text class="desc" x="16" y="289">Declarative skill manager for Claude Code and Codex.<tspan x="16" dy="17">Declare skills in YAML, pin exact revisions in a...</tspan></text>
   <circle cx="21" cy="327" r="5" fill="#3178c6"/>
   <text class="meta" x="33" y="331">TypeScript</text>
-  <text class="meta" x="150" y="331">&#9733; 11</text>
+  <text class="meta" x="150" y="331">&#9733; 12</text>
 </svg>

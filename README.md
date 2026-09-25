@@ -24,7 +24,7 @@ Everything I run, with a 20-second video for each and its live state: **[byronxl
 </tr>
 <tr>
 <td width="50%" valign="top"><b><a href="https://byronxlg.com/#shared-data-feeds">shared-data-feeds</a></b> Always-on collectors for weather and Polymarket market data, streamed into Redis on a Mac mini.<br><sub><a href="https://byronxlg.com/#shared-data-feeds">video</a></sub></td>
-<td width="50%" valign="top"><a href="https://byronxlg.com/#x402-services"><img src="https://byronxlg.com/assets/x402-services/brag.jpg" alt="x402-services" width="100%"></a><br><b><a href="https://x402.botsmith.dev/catalog">x402-services</a></b> Pay-per-call market data for AI agents. HTTP 402, USDC on Base, no accounts.<br><sub><a href="https://byronxlg.com/#x402-services">video</a> &middot; <a href="https://x402.botsmith.dev/catalog">site</a></sub></td>
+<td width="50%" valign="top"><a href="https://byronxlg.com/#x402-services"><img src="https://byronxlg.com/assets/x402-services/brag.jpg" alt="x402-services" width="100%"></a><br><b><a href="https://x402.botsmith.dev/">x402-services</a></b> Pay-per-call market data for AI agents. HTTP 402, USDC on Base, no accounts.<br><sub><a href="https://byronxlg.com/#x402-services">video</a> &middot; <a href="https://x402.botsmith.dev/">site</a></sub></td>
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://byronxlg.com/#blog"><img src="https://blog.byronxlg.com/assets/brag.jpg" alt="blog" width="100%"></a><br><b><a href="https://blog.byronxlg.com/">blog</a></b> Writing, by hand. Engineering notes from running all of this.<br><sub><a href="https://byronxlg.com/#blog">video</a> &middot; <a href="https://blog.byronxlg.com/">site</a></sub></td>

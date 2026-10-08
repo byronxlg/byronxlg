@@ -19,7 +19,7 @@ Everything I run, with a 20-second video for each and its live state: **[byronxl
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="https://byronxlg.com/#botsmith"><img src="https://botsmith.dev/assets/brag.jpg" alt="botsmith" width="100%"></a><br><b><a href="https://botsmith.dev/">botsmith</a></b> botsmith.dev, the studio site and index of what botsmith runs.<br><sub><a href="https://byronxlg.com/#botsmith">video</a> &middot; <a href="https://botsmith.dev/">site</a> &middot; <a href="https://github.com/byronxlg/botsmith">repo</a></sub></td>
+<td width="50%" valign="top"><a href="https://byronxlg.com/#botsmith"><img src="https://botsmith.dev/assets/brag.jpg" alt="botsmith" width="100%"></a><br><b><a href="https://botsmith.dev/">botsmith</a></b> botsmith.dev, the studio site: every botsmith product, and how an agent connects to x402.<br><sub><a href="https://byronxlg.com/#botsmith">video</a> &middot; <a href="https://botsmith.dev/">site</a> &middot; <a href="https://github.com/byronxlg/botsmith">repo</a></sub></td>
 <td width="50%" valign="top"><a href="https://byronxlg.com/#polymarket-tui"><img src="https://polymarket-tui.botsmith.dev/assets/brag.jpg" alt="polymarket-tui" width="100%"></a><br><b><a href="https://polymarket-tui.botsmith.dev/">polymarket-tui</a></b> A fast, keyboard-driven terminal client for Polymarket. Open source, on PyPI and Homebrew.<br><sub><a href="https://byronxlg.com/#polymarket-tui">video</a> &middot; <a href="https://polymarket-tui.botsmith.dev/">site</a> &middot; <a href="https://github.com/byronxlg/polymarket-tui">repo</a></sub></td>
 </tr>
 <tr>

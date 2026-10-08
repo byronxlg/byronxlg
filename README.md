@@ -24,7 +24,7 @@ Everything I run, with a 20-second video for each and its live state: **[byronxl
 </tr>
 <tr>
 <td width="50%" valign="top"><a href="https://byronxlg.com/#semantic-similarity-app"><img src="https://byronxlg.com/assets/semantic-similarity-app/brag.jpg" alt="semantic-similarity-app" width="100%"></a><br><b><a href="https://tryai.botsmith.dev/">semantic-similarity-app</a></b> Try AI models in the browser, free. Give TypeSafe&#x27;s Jev decision model a go on a sponsored pool, or compare two texts by meaning.<br><sub><a href="https://byronxlg.com/#semantic-similarity-app">video</a> &middot; <a href="https://tryai.botsmith.dev/">site</a></sub></td>
-<td width="50%" valign="top"><a href="https://byronxlg.com/#skillfold"><img src="https://byronxlg.com/skillfold/assets/brag.jpg" alt="skillfold" width="100%"></a><br><b><a href="https://byronxlg.com/skillfold/">skillfold</a></b> A declarative skill manager for Claude Code and Codex. Open source, on npm.<br><sub><a href="https://byronxlg.com/#skillfold">video</a> &middot; <a href="https://byronxlg.com/skillfold/">site</a> &middot; <a href="https://github.com/byronxlg/skillfold">repo</a></sub></td>
+<td width="50%" valign="top"><a href="https://byronxlg.com/#skillfold"><img src="https://skillfold.botsmith.dev/assets/brag.jpg" alt="skillfold" width="100%"></a><br><b><a href="https://skillfold.botsmith.dev/">skillfold</a></b> A declarative skill manager for Claude Code and Codex. Open source, on npm.<br><sub><a href="https://byronxlg.com/#skillfold">video</a> &middot; <a href="https://skillfold.botsmith.dev/">site</a> &middot; <a href="https://github.com/byronxlg/skillfold">repo</a></sub></td>
 </tr>
 </table>
 <!-- projects:end -->
